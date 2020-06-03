@@ -18,6 +18,7 @@ import (
 type RuntimeComponentSpec struct {
 	Version          string                       `json:"version,omitempty"`
 	ApplicationImage string                       `json:"applicationImage"`
+	Command          []string                     `json:"command,omitempty"`
 	Replicas         *int32                       `json:"replicas,omitempty"`
 	Autoscaling      *RuntimeComponentAutoScaling `json:"autoscaling,omitempty"`
 	PullPolicy       *corev1.PullPolicy           `json:"pullPolicy,omitempty"`
@@ -236,6 +237,11 @@ func init() {
 // GetApplicationImage returns application image
 func (cr *RuntimeComponent) GetApplicationImage() string {
 	return cr.Spec.ApplicationImage
+}
+
+// GetCommand returns command
+func (cr *RuntimeComponent) GetCommand() []string {
+	return cr.Spec.Command
 }
 
 // GetPullPolicy returns image pull policy

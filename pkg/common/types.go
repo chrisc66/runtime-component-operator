@@ -153,6 +153,7 @@ type BaseComponentAffinity interface {
 // BaseComponent represents basic kubernetes application
 type BaseComponent interface {
 	GetApplicationImage() string
+	GetCommand() []string
 	GetPullPolicy() *corev1.PullPolicy
 	GetPullSecret() *string
 	GetServiceAccountName() *string

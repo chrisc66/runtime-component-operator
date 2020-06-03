@@ -700,6 +700,10 @@ spec:
                   resourceRef:
                     type: string
                 type: object
+              command:
+                items:
+                  type: string
+                type: array
               createAppDefinition:
                 type: boolean
               createKnativeService:
