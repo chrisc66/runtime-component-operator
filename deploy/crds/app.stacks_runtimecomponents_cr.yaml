@@ -4,6 +4,6 @@ metadata:
   name: example-runtime-component
 spec:
   # Add fields here
-  applicationImage: <SPECIFY_APPLICATION_IMAGE_HERE>
-#  applicationImage: adoptopenjdk/openjdk8-openj9:x86_64-ubi-jre8u-nightly
-#  command: ["jitserver", "-Xjit:verbose"]
+#  applicationImage: <SPECIFY_APPLICATION_IMAGE_HERE>
+  applicationImage: adoptopenjdk/openjdk8-openj9:x86_64-ubi-jre8u-nightly
+  command: ["jitserver", "-Xjit:verbose"]
