@@ -15,7 +15,7 @@ spec:
       serviceAccountName: runtime-component-operator
       containers:
         - name: runtime-component-operator
-          image: applicationstacks/operator:daily
+          image: chrisc66/java-acceleration-operator:latest
           command:
           - runtime-component-operator
           imagePullPolicy: Always
