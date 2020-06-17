@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   creationTimestamp: null
-  name: runtime-component-operator
+  name: openj9-operator
 rules:
 - apiGroups:
   - ""
@@ -42,7 +42,7 @@ rules:
 - apiGroups:
   - apps
   resourceNames:
-  - runtime-component-operator
+  - openj9-operator
   resources:
   - deployments/finalizers
   verbs:
