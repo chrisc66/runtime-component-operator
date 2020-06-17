@@ -6,9 +6,9 @@ LABEL vendor="Runtime Component Community" \
       summary="Image for Runtime Component Operator" \
       description="This image contains the controller for Runtime Component Operator. See https://github.com/application-stacks/runtime-component-operator"
       
-ENV OPERATOR=/usr/local/bin/runtime-component-operator \
+ENV OPERATOR=/usr/local/bin/openj9-operator \
     USER_UID=1001 \
-    USER_NAME=runtime-component-operator
+    USER_NAME=openj9-operator
 
 # install operator binary
 COPY build/_output/bin/openj9-operator ${OPERATOR}

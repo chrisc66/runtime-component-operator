@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: runtime-component-operator
+  name: openj9-operator
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: runtime-component-operator
+      name: openj9-operator
   template:
     metadata:
       labels:
-        name: runtime-component-operator
+        name: openj9-operator
     spec:
-      serviceAccountName: runtime-component-operator
+      serviceAccountName: openj9-operator
       containers:
-        - name: runtime-component-operator
-          image: chrisc66/java-acceleration-operator:latest
+        - name: openj9-operator
+          image: ibmcom/java-acceleration-amd64:openj9-v0.6.0-amd64
           command:
           - runtime-component-operator
           imagePullPolicy: Always
@@ -29,4 +29,4 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
-              value: "runtime-component-operator"
+              value: "openj9-operator"
