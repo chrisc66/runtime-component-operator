@@ -1,0 +1,8 @@
+apiVersion: app.stacks/v1beta1
+kind: RuntimeComponent
+metadata:
+  name: example-openj9
+spec:
+  # Add fields here
+  applicationImage: <SPECIFY_ADOPT_OPENJ9_IMAGE_HERE>
+  command: ["<SPECIFY_CONTAINER_START_COMMAND_HERE>"]
